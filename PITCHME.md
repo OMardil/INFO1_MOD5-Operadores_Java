@@ -122,11 +122,11 @@ Las variables primitivas son los tipos de datos más básicos existentes en Java
 @snapend
 
 +++
-## Operaciones lógicas
+## Operadores Lógicos
 
 +++
 @snap[text-08]
-## Operaciones aritméticas
+## Operadores Aritméticos
 @snapend
 @snap[span-100]
 Podemos formar expresiones aritméticas mediante los operadores:
@@ -156,7 +156,7 @@ Podemos formar expresiones aritméticas mediante los operadores:
 @snap[span-100 text-08]
 @css[text-pink](IMPORTANTE!!!)
 <br>
-Cuando ambos operadores son de tipo `int`, las divisiones son divisiones enteras. El resultado es truncado:
+Cuando ambos operandos son de tipo `int`, el símbolo (@css[text-blue]( / )) indica una división entera. El resultado se trunca:
 <br>
 `9 / 2 = 4` 
 <br>
@@ -164,7 +164,7 @@ Cuando ambos operadores son de tipo `int`, las divisiones son divisiones enteras
 <br><br>
 @snapend
 @snap[span-100 text-08 fragment]
-Cuando por lo menos algun operador es de tipo `double` o `float`, se hace división decimal. El resultado mostrará los decimales:
+Cuando por lo menos algun operando de la división es de tipo `double` o `float`, se hace división decimal. El resultado contará con una parte decimal:
 <br>
 `9 / 2.0 = 4.5` 
 <br>
@@ -180,9 +180,30 @@ El operador de @css[text-blue](módulo) (@css[text-blue](%)) calcula el residuo 
 <br>
 `17 % 3 = 2`
 <br><br>
-Este operador tiene muchos usos, por ejemplo verificar si un número es par o impar.
-
+Este operador tiene muchos usos, por ejemplo @css[text-blue](verificar si un número es par o impar).
 @snapend 
+
++++ 
+@snap[span-100 text-08]
+## Operadores Incrementales y Decrementales
+Hay instrucciones especiales en Java que nos permiten incrementar el valor de una variable en 1. Estos se identifican mediante @css[text-blue](++) y @css[text-blue](--). Por ejemplo, asumiento que count es una variable numérica: 
+@snapend
+ 
+@snap[span-50 text-08 text-center]
+<br>
+`count++`<br>
+`++count`<br>
+`count--`<br>
+`--count`<br>
+@snapend
+
+@snap[span-60 south-east text-center fragment text-07 bg-orange]
+@color[white](Cuando el operador está antes de la variable, se actualiza el contenido de la variable antes de evaluar la expresión.<br><br> Cuando el operador está después, se evalúa la expresión y después se actualiza la variable.)
+@snapend
+
++++?code=assets/src/operadores.java&lang=java
+
+
 ---
 ## Bloques
 
