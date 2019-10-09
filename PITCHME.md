@@ -18,7 +18,7 @@
 
 +++
 ## Identificadores
-@snap[span-100]
+@snap[span-100 text-09]
 Un identificador es el nombre que se utiliza para referirnos una variable o método.
 
 Las variables pueden contener:
@@ -33,9 +33,9 @@ Las variables pueden contener:
 @snapend
 
 @snapend
-@snap[span-100 fragment]
+@snap[span-100 fragment text-09]
 Sin embargo, no pueden:
-@ul[text-08 text-blue]
+@ul[text-09 text-blue]
 * El primer caracter ser un número
 * Contener puntos (.), asteriscos (*), u otros caracteres especiales (@!ñ%&).
 * Ser una palabra clave o palabra reservada. [Ver lista](https://en.wikipedia.org/wiki/List_of_Java_keywords)
@@ -43,18 +43,18 @@ Sin embargo, no pueden:
 @snapend
 
 +++?code=assets/src/identifiers.java&lang=java
-@[1, zoom-20](Válido)
-@[2, zoom-20](Válido, combinar mayúsculas y minúsculas está permitido.)
-@[3, zoom-20](Válido, combinar caracteres y números está permitido.)
-@[4, zoom-20](Válido)
-@[5, zoom-20](Válido)
-@[6, zoom-20](Inválido! No podemos combinar letras y espacios.)
-@[7, zoom-20](Inválido! Los identificadores no pueden comenzar con un número.)
-@[8, zoom-20](Válido)
-@[9, zoom-20](Inválido! Los identificadores no pueden comenzar con caracteres especiales.)
-@[10, zoom-20](Inválido! Los identificadores no pueden comenzar con un número.)
-@[11, zoom-20](Inválido! Existen palabras reservadas que NO pueden ser utilizadas como nombres de variables.)
-@[12, zoom-11](Válido, es posible combinar mayúsculas y minúsculas. Los identificadores pueden ser arbitrareamente largas.)
+@[1, zoom-20](@fa[check-square text-green] Válido)
+@[2, zoom-20](@fa[check-square text-green] Válido, combinar mayúsculas y minúsculas está permitido.)
+@[3, zoom-20](@fa[check-square text-green] Válido, combinar caracteres y números está permitido.)
+@[4, zoom-20](@fa[check-square text-green] Válido)
+@[5, zoom-20](@fa[check-square text-green] Válido)
+@[6, zoom-20](@fa[times-circle text-pink] Inválido! No podemos combinar letras y espacios.)
+@[7, zoom-20](@fa[times-circle text-pink] Inválido! Los identificadores no pueden comenzar con un número.)
+@[8, zoom-20](@fa[check-square text-green] Válido)
+@[9, zoom-20](@fa[times-circle text-pink] Inválido! Los identificadores no pueden comenzar con caracteres especiales.)
+@[10, zoom-20](@fa[times-circle text-pink] Inválido! Los identificadores no pueden comenzar con un número.)
+@[11, zoom-20](@fa[times-circle text-pink] Inválido! Existen palabras reservadas que NO pueden ser utilizadas como nombres de variables.)
+@[12, zoom-11](@fa[check-square text-green] Válido, es posible combinar mayúsculas y minúsculas. Los identificadores pueden ser arbitrareamente largas.)
 
 --- 
 @snap[midpoint span-100 text-08]
@@ -202,8 +202,40 @@ Hay instrucciones especiales en Java que nos permiten incrementar el valor de un
 @snapend
 
 +++?code=assets/src/operadores.java&lang=java
+@[1-2](Al evaluar la asignación, primero se actualiza el valor de "m", y después se evalúa la multiplicación.)
+@[1-6]
 
+@[9-10]
+@[9-13](Al evaluar la asignación, primero se evalúa la multiplicación 3 x 4, y luego se incrementa el valor de "m")
 
 ---
+@snap[midpoint span-100]
 ## Bloques
+@snapend
 
++++
+## Bloques
+Un bloque es una sección de código encapsulada por @css[text-blue](llaves) ( @css[text-blue]({ }) ). 
+
+Un bloque no indica alguna instrucción, sino sirve para indicar el inicio o fin de algun grupo de instrucciones.
+
+Cada llave de apertura debe ser posteriormente cerrada por una llave opuesta:
+
++++?code=assets/src/Test.java
+@snap[south span-100 text-center]
+Las llaves se pueden acomodar en una misma línea. (Esto es lo más común!)
+@snapend
++++
+```java
+public class Test 
+  {
+  public static void main(String[] args) 
+  {
+    System.out.println("Hello, World!");
+  }
+}
+```
+@snap[south span-100 text-center]
+¡O en líneas distintas!
+@snapend
+---

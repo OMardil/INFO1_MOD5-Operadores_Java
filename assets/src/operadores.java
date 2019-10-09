@@ -1,17 +1,13 @@
-int a = 10;
-int b = 3;
+int m = 4;
+int result = 3 * (++m);
 
-int out = a / b;
-System.out.println(out);
+//After executing: 
+// - result has a value of 15
+// - m has a value of 5
 
-out = a % b;
-System.out.println(out);
 
-out = a++ / b;
-System.out.println(out);
-
-out = ++a / b;
-System.out.println(out);
-
-out = ++a / b * 1.0;
-System.out.println(out);
+int m = 4;
+int result = 3 * (m++);
+//After executing: 
+// - result has a value of 12
+// - m has a value of 5
