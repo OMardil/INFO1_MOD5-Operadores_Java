@@ -6,8 +6,8 @@ int result = 3 * (++m);
 // - m has a value of 5
 
 
-int m = 4;
-int result = 3 * (m++);
+int n = 4;
+int result = 3 * (n++);
 //After executing: 
 // - result has a value of 12
-// - m has a value of 5
+// - n has a value of 5

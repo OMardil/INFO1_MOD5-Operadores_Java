@@ -202,11 +202,19 @@ Hay instrucciones especiales en Java que nos permiten incrementar el valor de un
 @snapend
 
 +++?code=assets/src/operadores.java&lang=java
-@[1-2](Al evaluar la asignación, primero se actualiza el valor de "m", y después se evalúa la multiplicación.)
+@[1]("m" tiene un valor de 4.)
+@[1-2](Al evaluar la asignación, primero se actualiza el valor de "m", y después se evalúa la multiplicación. result = 3 x 5)
 @[1-6]
 
+@[9](n tiene un valor inicial de 4)
 @[9-10]
-@[9-13](Al evaluar la asignación, primero se evalúa la multiplicación 3 x 4, y luego se incrementa el valor de "m")
+@[9-13](Al evaluar la asignación, primero se evalúa la multiplicación 3 x 4, y luego se incrementa el valor de "n")
+
++++?code=assets/src/Operators1.java&lang=java
+@[5] (DESPUES: a = 34)
+@[6] (DESPUES: b = 21)
+@[5] (ANTES: a = 34, b = 22 || c = 34 + 22 || a = 35, b = 22)
+
 
 ---
 @snap[midpoint span-100]
