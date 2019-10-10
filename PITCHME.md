@@ -259,8 +259,8 @@ public class Test
 @snapend
 
 +++
-### Clase Scanner
-@snap[span-100]
+## Clase Scanner
+@snap[span-100 text-08]
 La clase `Scanner` es una librería de instrucciones que permiten al usuario recuperar información del teclado a través de la consola. <br>
 Cuando queremos incorporar librerías externas a alguna clase, agregamos referencia al programa utilizando la instrucción import. <br>
 <br>
@@ -268,6 +268,8 @@ Cuando queremos incorporar librerías externas a alguna clase, agregamos referen
 <br>
 De esta forma, toda la funcionalidad de la clase `Scanner` se incluye al programa en el que estamos trabajando.
 @snapend
+
++++?code=assets/src/ScannerTest.java&lang=java
 
 +++?code=assets/src/ScannerTest.java&lang=java
 @[1, zoom-20](Agregamos el include al comenzar el archivo. Aquí podemos incluir todas las librerías que vayamos a importar.)
