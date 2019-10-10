@@ -211,10 +211,14 @@ Hay instrucciones especiales en Java que nos permiten incrementar el valor de un
 @[9-13](Al evaluar la asignación, primero se evalúa la multiplicación 3 x 4, y luego se incrementa el valor de "n")
 
 +++?code=assets/src/Operators1.java&lang=java
-@[5] (DESPUES: a = 34)
-@[6] (DESPUES: b = 21)
-@[5] (ANTES: a = 34, b = 22 || c = 34 + 22 || a = 35, b = 22)
-
+@[5, zoom-20]()
+@[6, zoom-20]()
+@[7, zoom-20]()
+@[8, zoom-20]()
+@[9, zoom-20]()
+@[10, zoom-20]()
+@[11, zoom-20]()
+@[12, zoom-20]()
 
 ---
 @snap[midpoint span-100]
