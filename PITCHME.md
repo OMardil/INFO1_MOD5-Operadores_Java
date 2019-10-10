@@ -122,9 +122,6 @@ Las variables primitivas son los tipos de datos más básicos existentes en Java
 @snapend
 
 +++
-## Operadores Lógicos
-
-+++
 @snap[text-08]
 ## Operadores Aritméticos
 @snapend
@@ -210,16 +207,20 @@ Hay instrucciones especiales en Java que nos permiten incrementar el valor de un
 @[9-10]
 @[9-13](Al evaluar la asignación, primero se evalúa la multiplicación 3 x 4, y luego se incrementa el valor de "n")
 
-+++?code=assets/src/Operators1.java&lang=java
-@[5, zoom-20]()
-@[6, zoom-20]()
-@[7, zoom-20]()
-@[8, zoom-20]()
-@[9, zoom-20]()
-@[10, zoom-20]()
-@[11, zoom-20]()
-@[12, zoom-20]()
++++
+### Precedencia de Operaciones
+@snap[midpoint span-100]
+![](assets/img/precedence.png)
+@snapend
 
++++?code=assets/src/Operators1.java&lang=java
+@[3, zoom-20](a = 7)
+@[4, zoom-20](b = 4)
+@[5, zoom-20](c = 7 + 5)
+@[6, zoom-20](d = 7 + 4 + 12)
+@[7, zoom-20](e = 7 + 4 + -11 + 23)
+@[8, zoom-20](sum = 7 + 4 + 11 + 22 + 23)
+@[9, zoom-20]("Suma: 67")
 ---
 @snap[midpoint span-100]
 ## Bloques
@@ -250,4 +251,29 @@ public class Test
 @snap[south span-100 text-center]
 ¡O en líneas distintas!
 @snapend
+
 ---
+@snap[span-100 midpoint h3-blue]
+## Clase Scanner
+### Lectura del teclado
+@snapend
+
++++
+### Clase Scanner
+@snap[span-100]
+La clase `Scanner` es una librería de instrucciones que permiten al usuario recuperar información del teclado a través de la consola. <br>
+Cuando queremos incorporar librerías externas a alguna clase, agregamos referencia al programa utilizando la instrucción import. <br>
+<br>
+`import java.util.Scanner;`
+<br>
+De esta forma, toda la funcionalidad de la clase `Scanner` se incluye al programa en el que estamos trabajando.
+@snapend
+
++++?code=assets/src/ScannerTest.java&lang=java
+@[1, zoom-20](Agregamos el include al comenzar el archivo. Aquí podemos incluir todas las librerías que vayamos a importar.)
+@[7-8, zoom-20](Declaramos la variable "keyboard" de la clase Scanner.)
+@[9, zoom-20](Inicializamos la variable "keyboard" para hacer referencia al teclado.)
+@[10-11, zoom-20](Imprimimos un mensaje en consola.)
+@[12, zoom-20](El programa se detendrá hasta que el usuario escriba algo en consola, y presione la tecla Enter. El mensaje escrito en consola se guardará en la variable "n")
+@[13, zoom-20](Concatenamos los mensajes, y les damos salida en la consola.)
+@[15, zoom-20](Cerramos la conexión al teclado. A partir de este momento, la variable "keyboard" no podrá ser utilizada para leer información del teclado.)

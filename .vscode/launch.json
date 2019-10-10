@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ScannerTest",
+            "request": "launch",
+            "mainClass": "ScannerTest"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Operators1",
             "request": "launch",
             "mainClass": "Operators1"
