@@ -2,8 +2,8 @@ class Operators1
 {
     public static void main(String[] args)
     {
-        int a = 34;
-        int b = 21;
+        int a = 7;
+        int b = 4;
         int c = a++ + ++b;
         int d = --a + --b + c--;
         int e = a + +b + +c + d--;
