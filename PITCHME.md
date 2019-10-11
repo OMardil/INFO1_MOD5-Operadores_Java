@@ -291,3 +291,9 @@ Para leer otros tipos de datos primitivos, podemos utilizar la nomenclatura: <br
 `keyboard.next` + @css[text-blue](_data type_)
 <br><br>
 @snapend
+
+---
+@snap[span-100 midpoint h3-blue]
+## Clase String
+### Manejo de cadenas
+@snapend
