@@ -159,7 +159,7 @@ Cuando ambos operandos son de tipo `int`, el símbolo (@css[text-blue]( / )) ind
 <br>
 `9 / 2 = 4` 
 <br>
-`100 / 99 = 0`
+`100 / 99 = 1`
 <br><br>
 @snapend
 @snap[span-100 text-08 fragment]
