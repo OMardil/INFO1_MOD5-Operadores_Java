@@ -302,7 +302,9 @@ Para leer otros tipos de datos primitivos, podemos utilizar la nomenclatura: <br
 @snap[text-08 h3-blue span-100]
 ### Strings
 Un `String` es una cadena o conjunto de caracteres. No es una variable primitiva, porque se puede subdividir en caracteres individuales. La Clase `String` cuenta con métodos para facilitar el manejo y procesamiento de cadenas.  <br>
+@snapend
 
++++
 Un `String` se puede declarar de tres formas distintas: <br>
 
 ````java
@@ -316,7 +318,7 @@ String greeting = new String("Hello!");
 @snapend
 
 +++
-@snap[text-08 h3-blue span-100]
+@snap[h3-blue span-100]
 ### Concatenar Strings
 Dos strings pueden concatenarse utilizando el operador `+`. <br>
 ````java
@@ -332,7 +334,7 @@ Podemos concatenar variables de diferentes tipos, como `Strings`, `int`, `double
 @snapend
 
 +++
-@snap[text-08 h3-blue span-100]
+@snap[h3-blue span-100]
 ### Inicializar un String
 Hay veces que es necesario incializar un String con un valor vacío. Esto se puede hacer de la siguiente forma: 
 <br>
@@ -346,7 +348,9 @@ String s1 = "";
 ### String length()
 El método `length()` nos permite calcular el tamaño de un String. Este método devolverá un entero con la cantidad de caracteres que un String contenga.
 <br>
+@snapend
 
+@snap[span-100]
 ````java
 String s1;
 int n;
@@ -369,7 +373,9 @@ n = s1.length(); //Prints 0
 ### String toLowerCase() / toUpperCase()
 Los métodos `toLowerCase()` y `toUpperCase()` nos permiten procesar un texto para convertir una cadena a minúscula o mayúscula respectivamente. Estos métodos generan cadenas nuevas, por lo que debemos asignar el valor resultante a una variable de tipo String.
 <br>
+@snapend
 
+@snap[span-100]
 ````java
 String s1 = "abCD";
 String s2 = "abCD";
@@ -386,7 +392,9 @@ System.out.println(upperCase); //Prints "ABCD"
 @snap[text-08 h3-blue span-100]
 ### String replace()
 El método `replace()` sirve para reemplazar un caracter dentro del texto especificado por otro.  <br>
+@snapend
 
+@snap[span-100]
 ````java
 String s1 = "Bienvenido a la ciudad!";
 String s2 = s1.replace('e','x');
