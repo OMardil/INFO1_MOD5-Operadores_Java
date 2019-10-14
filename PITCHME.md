@@ -297,3 +297,95 @@ Para leer otros tipos de datos primitivos, podemos utilizar la nomenclatura: <br
 ## Clase String
 ### Manejo de cadenas
 @snapend
+
++++
+## Strings
+Un `String` es una cadena o conjunto de caracteres. No es una variable primitiva, porque se puede subdividir en caracteres individuales. La Clase `String` cuenta con métodos para facilitar el manejo y procesamiento de cadenas. 
+
+Un `String` se puede declarar de tres formas distintas:
+
+````java
+String greeting;
+greeting = "Hello!";
+
+String greeting = "Hello!";
+
+String greeting = new String("Hello!");
+````
+
++++
+## Concatenar Strings
+Dos strings pueden concatenarse utilizando el operador `+`. 
+````java
+String greeting;
+greeting = "Hello!";
+
+String sentence;
+sentence = greeting + "officer";
+System.out.println(sentence);
+````
+
+Podemos concatenar variables de diferentes tipos, como `Strings`, `int`, `double`, `char`, `boolean`, etc.
+
++++
+### Inicializar un String
+Hay veces que es necesario incializar un String con un valor vacío. Esto se puede hacer de la siguiente forma:
+
+````java
+String s1 = "";
+````
+
++++
+### String length()
+El método `length()` nos permite calcular el tamaño de un String. Este método devolverá un entero con la cantidad de caracteres que un String contenga.
+
+````java
+String s1;
+int n;
+
+s1 = "12345";
+n = s1.length();
+System.out.println(n); //Prints 5
+
+s1 = "aabc12345";
+n = s1.length();
+System.out.println(n); //Prints 9
+
+s1 = "";
+n = s1.length(); //Prints 0
+````
+
++++
+### String toLowerCase() / toUpperCase()
+Los métodos `toLowerCase()` y `toUpperCase()` nos permiten procesar un texto para convertir una cadena a minúscula o mayúscula respectivamente. Estos métodos generan cadenas nuevas, por lo que debemos asignar el valor resultante a una variable de tipo String.
+
+````java
+String s1 = "abCD";
+String s2 = "abCD";
+
+String lowerCase = s1.toLowerCase();
+String upperCase = s2.toUpperCase();
+
+System.out.println(lowerCase); //Prints "abcd"
+System.out.println(upperCase); //Prints "ABCD"
+````
+
+
++++
+### String replace()
+El método `replace()` sirve para reemplazar un caracter dentro del texto especificado por otro. 
+
+````java
+String s1 = "Bienvenido a la ciudad!";
+String s2 = s1.replace('e','x');
+System.out.println(s2); //Prints "Bixnvxnido a la ciudad!"
+
+s2 = s2.replace('a','x');
+System.out.println(s2); //Prints "Bixnvxnido x lx ciudxd!"
+````
+
++++ 
+### String substring()
+
++++ 
+### String trim()
