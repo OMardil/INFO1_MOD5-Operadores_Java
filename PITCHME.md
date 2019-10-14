@@ -299,10 +299,11 @@ Para leer otros tipos de datos primitivos, podemos utilizar la nomenclatura: <br
 @snapend
 
 +++
-## Strings
-Un `String` es una cadena o conjunto de caracteres. No es una variable primitiva, porque se puede subdividir en caracteres individuales. La Clase `String` cuenta con métodos para facilitar el manejo y procesamiento de cadenas. 
+@snap[text-08 h3-blue span-100]
+### Strings
+Un `String` es una cadena o conjunto de caracteres. No es una variable primitiva, porque se puede subdividir en caracteres individuales. La Clase `String` cuenta con métodos para facilitar el manejo y procesamiento de cadenas.  <br>
 
-Un `String` se puede declarar de tres formas distintas:
+Un `String` se puede declarar de tres formas distintas: <br>
 
 ````java
 String greeting;
@@ -312,32 +313,39 @@ String greeting = "Hello!";
 
 String greeting = new String("Hello!");
 ````
+@snapend
 
 +++
-## Concatenar Strings
-Dos strings pueden concatenarse utilizando el operador `+`. 
+@snap[text-08 h3-blue span-100]
+### Concatenar Strings
+Dos strings pueden concatenarse utilizando el operador `+`. <br>
 ````java
 String greeting;
-greeting = "Hello!";
+greeting = "Hello ";
 
 String sentence;
 sentence = greeting + "officer";
-System.out.println(sentence);
+System.out.println(sentence); //Prints "Hello officer"
 ````
-
+<br>
 Podemos concatenar variables de diferentes tipos, como `Strings`, `int`, `double`, `char`, `boolean`, etc.
+@snapend
 
 +++
+@snap[text-08 h3-blue span-100]
 ### Inicializar un String
-Hay veces que es necesario incializar un String con un valor vacío. Esto se puede hacer de la siguiente forma:
-
+Hay veces que es necesario incializar un String con un valor vacío. Esto se puede hacer de la siguiente forma: 
+<br>
 ````java
 String s1 = "";
 ````
+@snapend
 
 +++
+@snap[text-08 h3-blue span-100]
 ### String length()
 El método `length()` nos permite calcular el tamaño de un String. Este método devolverá un entero con la cantidad de caracteres que un String contenga.
+<br>
 
 ````java
 String s1;
@@ -354,10 +362,13 @@ System.out.println(n); //Prints 9
 s1 = "";
 n = s1.length(); //Prints 0
 ````
+@snapend
 
 +++
+@snap[text-08 h3-blue span-100]
 ### String toLowerCase() / toUpperCase()
 Los métodos `toLowerCase()` y `toUpperCase()` nos permiten procesar un texto para convertir una cadena a minúscula o mayúscula respectivamente. Estos métodos generan cadenas nuevas, por lo que debemos asignar el valor resultante a una variable de tipo String.
+<br>
 
 ````java
 String s1 = "abCD";
@@ -369,11 +380,12 @@ String upperCase = s2.toUpperCase();
 System.out.println(lowerCase); //Prints "abcd"
 System.out.println(upperCase); //Prints "ABCD"
 ````
-
+@snapend
 
 +++
+@snap[text-08 h3-blue span-100]
 ### String replace()
-El método `replace()` sirve para reemplazar un caracter dentro del texto especificado por otro. 
+El método `replace()` sirve para reemplazar un caracter dentro del texto especificado por otro.  <br>
 
 ````java
 String s1 = "Bienvenido a la ciudad!";
@@ -383,9 +395,14 @@ System.out.println(s2); //Prints "Bixnvxnido a la ciudad!"
 s2 = s2.replace('a','x');
 System.out.println(s2); //Prints "Bixnvxnido x lx ciudxd!"
 ````
+@snapend
 
 +++ 
+@snap[text-08 h3-blue span-100]
 ### String substring()
+@snapend
 
 +++ 
+@snap[text-08 h3-blue span-100]
 ### String trim()
+@snapend
