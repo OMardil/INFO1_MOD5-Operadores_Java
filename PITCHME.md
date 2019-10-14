@@ -364,7 +364,8 @@ n = s1.length();
 System.out.println(n); //Prints 9
 
 s1 = "";
-n = s1.length(); //Prints 0
+n = s1.length(); 
+System.out.println(n); //Prints 0
 ````
 @snapend
 
@@ -391,7 +392,7 @@ System.out.println(upperCase); //Prints "ABCD"
 +++
 @snap[text-08 h3-blue span-100]
 ### String replace()
-El método `replace()` sirve para reemplazar un caracter dentro del texto especificado por otro.  <br>
+El método `replace(char oldChar, char newChar)` sirve para reemplazar un caracter dentro del texto especificado por otro.  <br>
 @snapend
 
 @snap[span-100]
