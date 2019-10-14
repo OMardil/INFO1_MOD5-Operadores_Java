@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - MonkeyTrouble",
+            "request": "launch",
+            "mainClass": "MonkeyTrouble"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Substring",
             "request": "launch",
             "mainClass": "Substring"

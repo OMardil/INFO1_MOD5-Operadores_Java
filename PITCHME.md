@@ -483,3 +483,172 @@ other length units you must modify it completely.
 ### FIXME y TODO
 Hay ciertos identificadoresespeciales en los comentarios que un IDE (como Visual Studio Code, Eclipse, Netbeans, etc) reconoce como notación especial. Algunos ejemplos son: FIXME y TODO. Algunos ambientes de programación resaltan estos mensajes, pues indican que un programa aún no está terminado o tiene errores.
 @snapend
+
+---
+@snap[midpoint span-100]
+# Condiciones IF
+@snapend
+
++++
+# Expresiones boleanas
+Una expresión boleana es una operación cuyo valor puede ser @css[text-blue](TRUE) o @css[text-pink](FALSE).
+Hacemos uso de los operadores boleanos para realizar las comparaciones.
+
+````java
+time < limit
+count > 0
+letter == 'c'
+````
+
++++
+## Operadores boleanos
+![](assets/img/boolean_expression.png)
+
++++
+## Expresiones boleanas compuestas
+Es posible combinar múltiples expresiones boleanas mediante los operadores AND (@css[text-blue](&&)) y OR (@css[text-blue](||)). La sintaxis es la siguiente:
+
+(Expresion_1) && (Expresion_2)
+
+Los paréntesis son opcionales, pero facilitan la lectura de las expresiones.
++++
+
+````java
+//store is open between 8am and 10pm
+((hour >= 8) && (hour <= 22))
+
+//store is open between 8am and 1pm, then from 3pm to 10pm
+((hour >= 8) && (hour <= 13) || (hour >= 15 && hour <= 22)
+
+````
+
+
++++
+![](assets/img/java_logical_operators.png)
+
++++
+![](assets/img/and_or_truth_table.png)
+
+
++++
+### Comparación de variables primitivas
+Para comparar dos valores primitivos, podemos utilizar el operador de igualdad (@css[text-blue](==)).
+
+Por ejemplo:
+````java
+if (a == 3)
+````
+
+OJO! Recordemos que los valores de punto flotante pueden perder precisión, por lo que la mejor forma de comparar dos valores double es mediante los operadores (@css[text-blue](<=)) y (@css[text-blue](>=)).
+
+````java
+double a = 1/3.0;
+double b = 0.3333333333;
+double tolerancia = 0.000001;
+if (abs(a - b) < epsilon){
+  System.out.println("They are equal!");
+} else {
+  System.out.println("They are different!");  
+}
+
+````
++++
+### Comparación de Strings
+Para comparar dos variables de tipo String, NO podemos utilizar el operador (@css[text-blue](==)), pues @css[text-pink](no son variables primitivas).
+
+Para esto, debemos utilizar el método equals().
+
+````java
+String s1 = "hola";
+String s2 = "adios";
+
+if (s1.equals(s2)){
+  System.out.println("Iguales!");
+} else {
+  System.out.println("Diferentes!");
+}
+````
+
++++
+### Comparación de Strings
+También podemos utilizar el método equalsIgnoreCase() si queremos verificar comparar sin considerar mayúsculas o minúsculas.
+
+````java
+String s1 = "hola";
+String s2 = "HOLA";
+
+if (s1.equalsIgnoreCase(s2)){
+  System.out.println("Iguales!");
+} else {
+  System.out.println("Diferentes!");
+}
+````
+
++++ 
+@snap[span-100 h3-blue]
+### IF
+Existen instrucciones de control de flujo que nos permiten ejecutar selectivamente ciertas instrucciones. La primera instrucción instrucción es el IF.
+
+````java
+if (denominator > 0) {
+  int result = numerator / denominator;
+}
+
+````
+Cuando la condición dentro de los paréntesis `denominator > 0` se cumple, entonces las instrucciones dentro de los bloques @css[text-blue]({ }) se va a ejecutar.
+
+@snapend
+
++++
+@snap[span-100 h3-blue]
+### IF-ELSE
+Hay un segundo bloque, el ELSE que sólo se ejecuta cuando la condición NO se cumple. Por ejemplo:
+<br>
+
+````java
+if (denominator > 0) {
+  int result = numerator / denominator;
+} else 
+  System.out.println("Error! You cannot divide by zero.");
+}
+````
+@snapend
+
++++
+### Ejemplo
+#### Monkey Trouble!
+@snap[span-65 west]
+Tenemos dos changos:
+* Si los dos changos están sonriendo, estamos en problemas
+* Si los dos changos están serios, estamos en problemas.
+
+Diseña un programa de Java que permita modelar este ejercicio.
+@snapend
+
+@snap[span-40 east]
+![](assets/img/monkey_smile.png)
+@snapend
+
++++?code=assets/src/MonkeyTrouble.java
+
+
+---
+@snap[midpoint span-100]
+# Switch
+@snapend
+
+
+---
+@snap[midpoint span-100]
+# Ciclos WHILE
+@snapend
+
+---
+@snap[midpoint span-100]
+# Ciclos DO-WHILE
+@snapend
+
+---
+@snap[midpoint span-100]
+# Ciclos FOR
+@snapend
