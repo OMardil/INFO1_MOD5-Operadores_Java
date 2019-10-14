@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Substring",
+            "request": "launch",
+            "mainClass": "Substring"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - ScannerTest",
             "request": "launch",
             "mainClass": "ScannerTest"

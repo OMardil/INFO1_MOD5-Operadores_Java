@@ -408,9 +408,36 @@ System.out.println(s2); //Prints "Bixnvxnido x lx ciudxd!"
 +++ 
 @snap[text-08 h3-blue span-100]
 ### String substring()
+El método `substring(int beginIndex, int endIndex)` regresa un recorte del String original. El substring comienza en el índice especificado como `beginIndex` y se extiende hasta `endIndex - 1`. El tamaño del String resultante será: `endIndex - beginIndex`.
+
+NOTA: El conteo de posiciones comienza desde 0. Ejemplo:
+@snapend
+
+@snap[span-100]
+
+````java
+String s1 = "Monterrey, Nuevo León";
+String ciudad = s1.substring(0,9);
+String estado = s1.substring(11,21);
+
+System.out.println(ciudad); //Prints "Monterrey"
+System.out.println(estado); //Prints "Nuevo León"
+
+String s2 = "smiles".substring(1, 5);
+System.out.println(s2); //prints "mile"
+````
 @snapend
 
 +++ 
 @snap[text-08 h3-blue span-100]
 ### String trim()
+El método `trim()` crea un nuevo string eliminado los espacios vacíos al inicio y al final.
+@snapend
+@snap[span-100]
+````java
+String s1 = "     :)     ";
+String s2 = s1.trim();
+System.out.println(s2); //prints ":)"
+````
+
 @snapend
