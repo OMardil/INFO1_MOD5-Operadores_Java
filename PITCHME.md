@@ -350,7 +350,7 @@ El método `length()` nos permite calcular el tamaño de un String. Este método
 <br>
 @snapend
 
-@snap[span-100]
+@snap[span-100 text-09]
 ````java
 String s1;
 int n;
@@ -407,11 +407,11 @@ System.out.println(s2); //Prints "Bixnvxnido x lx ciudxd!"
 @snapend
 
 +++ 
-@snap[text-08 h3-blue span-100]
+@snap[text-07 h3-blue span-100]
 ### String substring()
 El método `substring(int beginIndex, int endIndex)` regresa un recorte del String original. El substring comienza en el índice especificado como `beginIndex` y se extiende hasta `endIndex - 1`. El tamaño del String resultante será: `endIndex - beginIndex`.
 
-NOTA: El conteo de posiciones comienza desde 0. Ejemplo:
+@css[text-blue](NOTA: El conteo de posiciones comienza desde 0.) <br>Ejemplo:
 @snapend
 
 @snap[span-100]
@@ -441,4 +441,45 @@ String s2 = s1.trim();
 System.out.println(s2); //prints ":)"
 ````
 
+@snapend
+
+---
+@snap[midpoint span-100]
+# Comentarios
+@snapend
+
++++
+@snap[span-100 h3-blue]
+### Comentarios
+Los comentarios son mensajes en el código ignorados por el compilador que le permiten un programador explicar el funcionamiento de un programa a otros programadores (o él mismo en el futuro!)
+@snapend
+
++++
+@snap[span-100 h3-blue]
+### //
+Podemos agregar un comentario en cualquier parte utilizando dos diagonales @css[text-blue](//).
+
+````java
+//This is a comment!!
+double radius; //in centimeters
+````
+@snapend
+
++++
+@snap[span-100 h3-blue]
+### /* .... */
+Cuando queremos agregar comentarios de varias líneas, podemos comenzar los comentarios con: @css[text-blue](/*) y terminar @css[text-blue](*/).
+````java
+/*
+This program will only work when processing
+lengths in centimeters. If you need to use 
+other length units you must modify it completely.
+*/
+````
+@snapend
+
++++
+@snap[span-100 h3-blue]
+### FIXME y TODO
+Hay ciertos identificadoresespeciales en los comentarios que un IDE (como Visual Studio Code, Eclipse, Netbeans, etc) reconoce como notación especial. Algunos ejemplos son: FIXME y TODO. Algunos ambientes de programación resaltan estos mensajes, pues indican que un programa aún no está terminado o tiene errores.
 @snapend
