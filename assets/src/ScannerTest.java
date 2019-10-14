@@ -9,7 +9,7 @@ public class ScannerTest{
         keyboard = new Scanner(System.in);
 
         System.out.print("Escribe tu nombre: ");
-        String n = s1.nextLine();
+        String n = keyboard.nextLine();
         System.out.println("¡Wow! Tu nombre " + n + " es muy bonito!");
 
         keyboard.close();
