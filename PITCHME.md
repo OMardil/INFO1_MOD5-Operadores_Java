@@ -320,28 +320,24 @@ String greeting = new String("Hello!");
 +++
 @snap[h3-blue span-100]
 ### Concatenar Strings
-Dos strings pueden concatenarse utilizando el operador `+`. <br>
-````java
-String greeting;
-greeting = "Hello ";
+@snap[span-100 text-08]
+Dos strings pueden concatenarse utilizando el operador @css[text-blue](+). <br><br>
 
-String sentence;
-sentence = greeting + "officer";
-System.out.println(sentence); //Prints "Hello officer"
-````
-<br>
-Podemos concatenar variables de diferentes tipos, como `Strings`, `int`, `double`, `char`, `boolean`, etc.
+Podemos concatenar valores y variables de diferentes tipos, como `Strings`, `int`, `double`, `char`, `boolean`, etc.
 @snapend
+<br><br>
+@code[java](assets/src/concatenate_example.java)
 
 +++
 @snap[h3-blue span-100]
 ### Inicializar un String
 Hay veces que es necesario incializar un String con un valor vacío. Esto se puede hacer de la siguiente forma: 
-<br>
-````java
-String s1 = "";
-````
+<br><br>
 @snapend
+
+```java
+String s1 = "";
+```
 
 +++
 @snap[text-08 h3-blue span-100]
@@ -350,8 +346,7 @@ El método `length()` nos permite calcular el tamaño de un String. Este método
 <br>
 @snapend
 
-@snap[span-100 text-09]
-````java
+```java
 String s1;
 int n;
 
@@ -366,8 +361,7 @@ System.out.println(n); //Prints 9
 s1 = "";
 n = s1.length(); 
 System.out.println(n); //Prints 0
-````
-@snapend
+```
 
 +++
 @snap[text-08 h3-blue span-100]
@@ -376,8 +370,7 @@ Los métodos `toLowerCase()` y `toUpperCase()` nos permiten procesar un texto pa
 <br>
 @snapend
 
-@snap[span-100]
-````java
+```java
 String s1 = "abCD";
 String s2 = "abCD";
 
@@ -386,8 +379,7 @@ String upperCase = s2.toUpperCase();
 
 System.out.println(lowerCase); //Prints "abcd"
 System.out.println(upperCase); //Prints "ABCD"
-````
-@snapend
+```
 
 +++
 @snap[text-08 h3-blue span-100]
@@ -395,28 +387,25 @@ System.out.println(upperCase); //Prints "ABCD"
 El método `replace(char oldChar, char newChar)` sirve para reemplazar un caracter dentro del texto especificado por otro.  <br>
 @snapend
 
-@snap[span-100]
-````java
+```java
 String s1 = "Bienvenido a la ciudad!";
 String s2 = s1.replace('e','x');
 System.out.println(s2); //Prints "Bixnvxnido a la ciudad!"
 
 s2 = s2.replace('a','x');
 System.out.println(s2); //Prints "Bixnvxnido x lx ciudxd!"
-````
-@snapend
+```
 
 +++ 
 @snap[text-07 h3-blue span-100]
 ### String substring()
 El método `substring(int beginIndex, int endIndex)` regresa un recorte del String original. El substring comienza en el índice especificado como `beginIndex` y se extiende hasta `endIndex - 1`. El tamaño del String resultante será: `endIndex - beginIndex`.
-
+<br>
 @css[text-blue](NOTA: El conteo de posiciones comienza desde 0.) <br>Ejemplo:
+<br><br>
 @snapend
 
-@snap[span-100]
-
-````java
+```java
 String s1 = "Monterrey, Nuevo León";
 String ciudad = s1.substring(0,9);
 String estado = s1.substring(11,21);
@@ -426,91 +415,150 @@ System.out.println(estado); //Prints "Nuevo León"
 
 String s2 = "smiles".substring(1, 5);
 System.out.println(s2); //prints "mile"
-````
-@snapend
+```
 
 +++ 
 @snap[text-08 h3-blue span-100]
 ### String trim()
-El método `trim()` crea un nuevo string eliminado los espacios vacíos al inicio y al final.
+El método `trim()` crea un nuevo string eliminado los espacios vacíos al inicio y al final. <br><br>
 @snapend
-@snap[span-100]
-````java
+
+```java
 String s1 = "     :)     ";
 String s2 = s1.trim();
 System.out.println(s2); //prints ":)"
-````
-
-@snapend
+```
 
 ---
-@snap[midpoint span-100]
+@snap[midpoint span-100 text-08]
 # Comentarios
 @snapend
 
 +++
 @snap[span-100 h3-blue]
 ### Comentarios
-Los comentarios son mensajes en el código ignorados por el compilador que le permiten un programador explicar el funcionamiento de un programa a otros programadores (o él mismo en el futuro!)
+Los comentarios son mensajes en el código ignorados por el compilador que le permiten un programador @css[text-blue](explicar el funcionamiento de un programa) a otros programadores (o él mismo en el futuro!)
 @snapend
 
 +++
-@snap[span-100 h3-blue]
-### //
-Podemos agregar un comentario en cualquier parte utilizando dos diagonales @css[text-blue](//).
+![](assets/img/code_comment_meme.png)
 
-````java
++++
+@snap[span-100 h3-blue]
+### // Comentarios individuales
+Podemos agregar un comentario en el código utilizando los símbolos @css[text-blue](//).
+<br>
+<br>
+Podemos agregarlo al comenzar o finalizar una oración. Todo lo que le sigue posterior será considerado un comentario.
+<br>
+@snapend
+
+``` java
 //This is a comment!!
 double radius; //in centimeters
-````
-@snapend
+```
 
 +++
-@snap[span-100 h3-blue]
-### /* .... */
-Cuando queremos agregar comentarios de varias líneas, podemos comenzar los comentarios con: @css[text-blue](/*) y terminar @css[text-blue](*/).
-````java
+@snap[h3-blue]
+### /<code>&ast;</code> ... <code>&ast;</code>/ Comentarios multilinea
+Cuando queremos agregar comentarios de varias líneas, podemos comenzar los comentarios con: @css[text-blue](/<code>&ast;</code>) y terminar @css[text-blue](<code>&ast;</code>/).
+@snapend
+
+```java
 /*
 This program will only work when processing
 lengths in centimeters. If you need to use 
-other length units you must modify it completely.
+other length units you must modify it.
 */
-````
-@snapend
-
+```
 +++
 @snap[span-100 h3-blue]
 ### FIXME y TODO
-Hay ciertos identificadoresespeciales en los comentarios que un IDE (como Visual Studio Code, Eclipse, Netbeans, etc) reconoce como notación especial. Algunos ejemplos son: FIXME y TODO. Algunos ambientes de programación resaltan estos mensajes, pues indican que un programa aún no está terminado o tiene errores.
-@snapend
-
----
-@snap[midpoint span-100]
-# Condiciones IF
+Hay ciertos identificadoresespeciales en los comentarios que un IDE (como Visual Studio Code, Eclipse, Netbeans, etc) reconoce como notación especial. Algunos ejemplos son: @css[text-blue](FIXME) y @css[text-blue](TODO). Algunos ambientes de programación resaltan estos mensajes, pues @css[text-blue](indican que un programa aún no está terminado o tiene errores).
 @snapend
 
 +++
-# Expresiones boleanas
-Una expresión boleana es una operación cuyo valor puede ser @css[text-blue](TRUE) o @css[text-pink](FALSE).
-Hacemos uso de los operadores boleanos para realizar las comparaciones.
+Ejemplo #1
+```java
+/*
+FIXME: Logic needs to be updated.
+*/
+```
+
+Ejemplo #2
+
+```java
+/*
+TODO: Add functionality to include calculation
+*/
+```
+
+
+---
+@snap[midpoint span-100 text-08]
+# Condiciones IF
+@snapend
+
++++ 
+@snap[span-100 h3-blue]
+### IF
+Existen instrucciones de control de flujo que nos permiten ejecutar selectivamente ciertas instrucciones. La primera instrucción instrucción es el IF.
+@snapend
+
+```java
+int result;
+if (denominator != 0) {
+  result = numerator / denominator;
+}
+```
+Cuando la condición dentro de los paréntesis `denominator !=0` se cumple, entonces las instrucciones dentro del bloque @css[text-blue]({ }) se ejecutarán.
+
+
++++
+@snap[span-100 h3-blue]
+### IF-ELSE
+Hay un segundo bloque, el ELSE que sólo se ejecuta cuando la condición NO se cumple.
+<br><br>
+@snapend
 
 ````java
+int result; 
+
+if (denominator == 0) {
+    System.out.println("Error! You cannot divide by zero.");
+} else 
+  result = numerator / denominator;
+}
+````
+@[5-7](Cuando denominador es diferente a 0, se ejecuta esta instrucción.)
+
++++
+@snap[h3-blue]
+### Expresiones boleanas
+Una expresión boleana es una operación cuyo valor puede ser @css[text-blue](TRUE) o @css[text-pink](FALSE).
+Hacemos uso de los operadores boleanos para realizar las comparaciones.
+@snapend
+
+<br>
+```java
 time < limit
 count > 0
 letter == 'c'
-````
+```
 
 +++
 ## Operadores boleanos
 ![](assets/img/boolean_expression.png)
 
 +++
-## Expresiones boleanas compuestas
+@snap[h3-blue text-08]
+### Expresiones boleanas compuestas
 Es posible combinar múltiples expresiones boleanas mediante los operadores AND (@css[text-blue](&&)) y OR (@css[text-blue](||)). La sintaxis es la siguiente:
-
+<br><br>
 (Expresion_1) && (Expresion_2)
-
+<br><br>
 Los paréntesis son opcionales, pero facilitan la lectura de las expresiones.
+@snapend
 +++
 
 ````java
@@ -521,37 +569,67 @@ Los paréntesis son opcionales, pero facilitan la lectura de las expresiones.
 ((hour >= 8) && (hour <= 13) || (hour >= 15 && hour <= 22)
 
 ````
-
-
 +++
+@snap[midpoint span-100]
 ![](assets/img/java_logical_operators.png)
+@snapend
 
 +++
+@snap[midpoint span-100]
 ![](assets/img/and_or_truth_table.png)
+@snapend
 
 
 +++
+@snap[text-08 h3-blue]
 ### Comparación de variables primitivas
-Para comparar dos valores primitivos, podemos utilizar el operador de igualdad (@css[text-blue](==)).
-
+Para comparar la @css[text-blue](igualdad) de dos valores primitivos, podemos utilizar el operador de igualdad (@css[text-blue](==)).
+<br><br>
 Por ejemplo:
+@snapend
 ````java
-if (a == 3)
+if (a == 3) {
+  System.out.println("a equals 3");
+}
 ````
++++ 
+OJO! Recordemos que los valores de punto flotante pueden perder precisión, por lo que la mejor forma de comparar dos valores double es mediante los operadores @css[text-blue](menor o igual que) (@css[text-blue](<=)) y @css[text-blue](mayor o igual que) (@css[text-blue](>=)).
 
-OJO! Recordemos que los valores de punto flotante pueden perder precisión, por lo que la mejor forma de comparar dos valores double es mediante los operadores (@css[text-blue](<=)) y (@css[text-blue](>=)).
++++
+```java
+double total = 1.0 / 10.0;
+total = total + 1.0 / 10.0;
+total = total + 1.0 / 10.0;
+total = total + 1.0 / 10.0;
+total = total + 1.0 / 10.0;
+total = total + 1.0 / 10.0;
+total = total + 1.0 / 10.0;
+total = total + 1.0 / 10.0;
+total = total + 1.0 / 10.0;
+total = total + 1.0 / 10.0;
+System.out.println(total); //prints 0.9999999999999999
+```
+@[1](Instanciamos una variable double de punto flotante.)
+@[1-10]()
+@[11](Se pierde precisión por el contenido de las variables!)
++++
 
-````java
+```java
 double a = 1/3.0;
-double b = 0.3333333333;
-double tolerancia = 0.000001;
-if (abs(a - b) < epsilon){
+double b = 0.3333;
+double tolerance = 0.0001;
+
+//Check if numbers are equal considering a tolerance
+if (Math.abs(a - b) <= tolerance){
   System.out.println("They are equal!");
 } else {
   System.out.println("They are different!");  
 }
+```
+@[1-3](Declaramos variables)
+@[6](Calculamos la diferencia con un valor absoluto)
+@[1-10](Descartaremos diferencias pequeñas [con una tolerancia de 0.0001] por diferencias de precisión en variables de punto flotante.)
 
-````
 +++
 ### Comparación de Strings
 Para comparar dos variables de tipo String, NO podemos utilizar el operador (@css[text-blue](==)), pues @css[text-pink](no son variables primitivas).
@@ -584,71 +662,63 @@ if (s1.equalsIgnoreCase(s2)){
 }
 ````
 
-+++ 
-@snap[span-100 h3-blue]
-### IF
-Existen instrucciones de control de flujo que nos permiten ejecutar selectivamente ciertas instrucciones. La primera instrucción instrucción es el IF.
-
-````java
-if (denominator > 0) {
-  int result = numerator / denominator;
-}
-
-````
-Cuando la condición dentro de los paréntesis `denominator > 0` se cumple, entonces las instrucciones dentro de los bloques @css[text-blue]({ }) se va a ejecutar.
-
-@snapend
-
 +++
-@snap[span-100 h3-blue]
-### IF-ELSE
-Hay un segundo bloque, el ELSE que sólo se ejecuta cuando la condición NO se cumple. Por ejemplo:
-<br>
-
-````java
-if (denominator > 0) {
-  int result = numerator / denominator;
-} else 
-  System.out.println("Error! You cannot divide by zero.");
-}
-````
-@snapend
-
-+++
+@snap[span-65 north-west h3-blue]
 ### Ejemplo
 #### Monkey Trouble!
-@snap[span-65 west]
+
 Tenemos dos changos:
+@ul[text-08](false)
 * Si los dos changos están sonriendo, estamos en problemas
 * Si los dos changos están serios, estamos en problemas.
-
+@ulend
+<br><br>
 Diseña un programa de Java que permita modelar este ejercicio.
 @snapend
 
-@snap[span-40 east]
+@snap[span-35 east]
 ![](assets/img/monkey_smile.png)
 @snapend
 
-+++?code=assets/src/MonkeyTrouble.java
++++
+@code[java code-power zoom-07 ](assets/src/MonkeyTrouble.java)
 
+@snap[south span-100]
+@[1-4,20-21](Imports, definición de la clase y main)
+@[5-12](Preguntar y capturar el estado de los dos monos. Al ser variables boolean, hay que capturar TRUE / FALSE)
+@[13-15](Si ambos monos, o ninguno, están sonriendo, entonces imprimimos en pantalla un mensaje de alerta.)
+@[16-18](De lo contrario, imprimimos que todo está OK)
+@[19](Se cierra el objeto teclado.)
+@[1-21]()
+@snapend
+
++++
+
+@css[text-07](Como la variable monkey es una variable de tipo boolean que ya almacena un valor TRUE/FALSE, podemos ahorrarnos la comparación.)
+@code[java zoom-07](assets/src/Monkey_f1.java)
+
+@css[text-07](Y utilizar la siguiente expresión:)
+@code[java zoom-07](assets/src/Monkey_f2.java)
+
+@css[text-08](Ambas expresiones son equivalentes.)
 
 ---
-@snap[midpoint span-100]
+@snap[midpoint span-100 text-08]
 # Switch
 @snapend
 
 
 ---
-@snap[midpoint span-100]
+@snap[midpoint span-100 text-08]
 # Ciclos WHILE
 @snapend
 
 ---
-@snap[midpoint span-100]
+@snap[midpoint span-100 text-08]
 # Ciclos DO-WHILE
 @snapend
 
 ---
-@snap[midpoint span-100]
+@snap[midpoint span-100 text-08]
 # Ciclos FOR
 @snapend
