@@ -870,16 +870,16 @@ switch(traffic_light) {
 @snapend
 
 +++
-@snap[east span-30]
+@snap[south span-70 text-left]
 @fa[exclamation-circle 2x text-pink]
 @fa[exclamation-circle 2x text-pink]
 @fa[exclamation-circle 2x text-pink]
 <br><br>
-Esto imprimiría:<br>
-> Stop! <br>
-> Slow down!<br>
-> Go!<br>
-> Wrong color!<br>
+Esto imprimiría:<br><br>
+Stop! <br>
+Slow down!<br>
+Go!<br>
+Wrong color!<br>
 @snapend
 
 ```java
