@@ -763,22 +763,26 @@ String input = keyboard.nextLine();
 char traffic_light = input.charAt(0);
 
 switch(traffic_light) {
-  case 'R':
+  case 'R': //red light
     System.out.println("Stop!");
     break;
-  case 'Y':
+  case 'Y': //yellow light
     System.out.println("Slow down!");  
     break;
-  case 'G':
+  case 'G': //green light
     System.out.println("Go!");  
     break;
 }
 
 ```
+@[1-2](Leemos un caracter del teclado.)
+@[3-4](Evaluamos la variable traffic_light)
+@[5,8,11](Dependiendo del contenido de la variable traffic_light, se ejecutarían distintas secciones.)
 
 +++
 @snap[h3-blue text-08]
 ### Sintaxis
+Podemos incluir un caso que atrape el resto de las condiciones utilizando el keyword `default`.
 @snapend
 
 ```java
@@ -797,19 +801,101 @@ switch(traffic_light) {
     break;
   default:
     System.out.println("Wrong color!");
+    break;
 }
 
+```
+
++++
+```java
+char traffic_light = 'G';
+
+switch(traffic_light) {
+  case 'R': //red light
+    System.out.println("Stop!");
+    break;
+  case 'Y': //yellow light
+    System.out.println("Slow down!");  
+    break;
+  case 'G': //green light
+    System.out.println("Go!");  
+    break;
+  default:
+    System.out.println("Wrong color!");
+    break;        
+}
+```
+@[1](traffic_light tiene un valor 'G')
+@[3](Se evalúa el contenido de traffic_light en el switch)
+@[4](traffic_light == 'R'? false, por lo que continuamos a la siguiente expresión)
+@[7](traffic_light == 'Y'? false, por lo que continuamos a la siguiente expresión)
+@[10](traffic_light == 'G'? true!, por lo que entramos a la sección).
+@[11](Se imprime en pantalla "Go")
+@[12](El break indica que debemos salir del bloque {})
+@[16](Salimos del bloque)
+@[1-16]()
+
++++
+@snap[h3-blue text-08]
+Es posible hacer que dos valores sigan el mismo camino:
+@snapend
+
+```java
+String input = keyboard.nextLine();
+char traffic_light = input.charAt(0);
+
+switch(traffic_light) {
+  case 'R': case 'r': //red light
+    System.out.println("Stop!");
+    break;
+  case 'Y': case 'y': //yellow light
+    System.out.println("Slow down!");  
+    break;
+  case 'G': case 'g': //green light
+    System.out.println("Go!");  
+    break;
+  default:
+    System.out.println("Wrong color!");
+    break;        
+}
 ```
 
 +++
 @snap[h3-blue text-08]
 ### Errores comunes
 @ol[]
-1. Olvidar el break.
-2. Repetir opciones.
-3. Olvidar casos.
+1. Olvidar el break: Cuando omitimos los breaks, todas las siguientes opciones se ejecutan.
+2. Repetir opciones: dos cases distintos NO PUEDEN TENER un mismo valor.
 @olend
 @snapend
+
++++
+@snap[east span-30]
+@fa[exclamation-circle 2x text-pink]
+@fa[exclamation-circle 2x text-pink]
+@fa[exclamation-circle 2x text-pink]
+<br><br>
+Esto imprimiría:<br>
+> Stop! <br>
+> Slow down!<br>
+> Go!<br>
+> Wrong color!<br>
+@snapend
+
+```java
+char traffic_light = 'G';
+
+switch(traffic_light) {
+  case 'R': //red light
+    System.out.println("Stop!");
+  case 'Y': //yellow light
+    System.out.println("Slow down!");  
+  case 'G': //green light
+    System.out.println("Go!");  
+  default:
+    System.out.println("Wrong color!");
+}
+```
 
 ---
 @snap[midpoint span-100 text-08]
