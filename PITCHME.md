@@ -894,18 +894,3 @@ switch(traffic_light) {
     System.out.println("Wrong color!");
 }
 ```
-
----
-@snap[midpoint span-100 text-08]
-# Ciclos WHILE
-@snapend
-
----
-@snap[midpoint span-100 text-08]
-# Ciclos DO-WHILE
-@snapend
-
----
-@snap[midpoint span-100 text-08]
-# Ciclos FOR
-@snapend
