@@ -872,12 +872,12 @@ switch(traffic_light) {
 +++
 @snap[south span-70 text-left text-08]
 @fa[exclamation-circle text-pink]
-<br><br>
+<br>
 Esto imprimiría:<br><br>
-Stop! <br>
-Slow down!<br>
-Go!<br>
-Wrong color!<br>
+@css[text-08](Stop! <br>)
+@css[text-08](Slow down!<br>)
+@css[text-08](Go!<br>)
+@css[text-08](Wrong color!<br>)
 @snapend
 
 ```java
