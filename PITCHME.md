@@ -304,28 +304,38 @@ Para leer otros tipos de datos primitivos, podemos utilizar la nomenclatura: <br
 Un `String` es una cadena o conjunto de caracteres. No es una variable primitiva, porque se puede subdividir en caracteres individuales. La Clase `String` cuenta con métodos para facilitar el manejo y procesamiento de cadenas.  <br>
 @snapend
 
+@snap[south span-70]
+![](assets/img/string_java.jpg)
+@snapend
 +++
-Un `String` se puede declarar de tres formas distintas: <br>
 
-````java
-String greeting;
-greeting = "Hello!";
+@snap[span-100 text-08]
+Un `String` se puede declarar de tres formas distintas: <br><br>
+@snapend
 
-String greeting = "Hello!";
+```java
+String g1;
+g1 = "Hello!";
 
-String greeting = new String("Hello!");
-````
+String g2 = "Hello!";
+
+String g3 = new String("Hello!");
+```
+
+<br>
+@snap[span-100 text-08]
+Las variables de tipo String pueden almacenar cualquier caracter de Unicode utilizando @css[text-blue](representación UTF-16 [16 bits]).
 @snapend
 
 +++
 @snap[h3-blue span-100]
 ### Concatenar Strings
 @snap[span-100 text-08]
-Dos strings pueden concatenarse utilizando el operador @css[text-blue](+). <br><br>
+Dos strings pueden concatenarse utilizando el operador @css[text-blue](+). <br>
 
 Podemos concatenar valores y variables de diferentes tipos, como `Strings`, `int`, `double`, `char`, `boolean`, etc.
 @snapend
-<br><br>
+<br>
 @code[java](assets/src/concatenate_example.java)
 
 +++
@@ -427,6 +437,24 @@ El método `trim()` crea un nuevo string eliminado los espacios vacíos al inici
 String s1 = "     :)     ";
 String s2 = s1.trim();
 System.out.println(s2); //prints ":)"
+```
+
++++
+@snap[text-08 h3-blue span-100]
+### String charAt()
+El método `charAt(int index)` permite recuperar el caracter que se encuentra en la posición especificada, siendo 0 el índice del primer caracter, y length()-1 índice del último.
+@snapend
+
+```java
+String s1 = "The Jungle Book";
+char c1 = s1.charAt(1);
+System.out.println(c1); //prints 'h'
+
+char c2 = s1.charAt(4);
+System.out.println(c2); //prints 'J'
+
+char c3 = s1.charAt(s1.length()-1);
+System.out.println(c3); //prints 'k'
 ```
 
 ---
@@ -631,10 +659,12 @@ if (Math.abs(a - b) <= tolerance){
 @[1-10](Descartaremos diferencias pequeñas [con una tolerancia de 0.0001] por diferencias de precisión en variables de punto flotante.)
 
 +++
+@snap[h3-blue span-100]
 ### Comparación de Strings
-Para comparar dos variables de tipo String, NO podemos utilizar el operador (@css[text-blue](==)), pues @css[text-pink](no son variables primitivas).
+Para comparar dos variables de tipo String, NO podemos utilizar el operador (@css[text-blue](==)), pues @css[text-pink](no son variables primitivas). <br><br>
 
-Para esto, debemos utilizar el método equals().
+Para esto, debemos utilizar el método equals(). <br>
+@snapend
 
 ````java
 String s1 = "hola";
@@ -648,8 +678,10 @@ if (s1.equals(s2)){
 ````
 
 +++
+@snap[h3-blue span-100]
 ### Comparación de Strings
 También podemos utilizar el método equalsIgnoreCase() si queremos verificar comparar sin considerar mayúsculas o minúsculas.
+@snapend
 
 ````java
 String s1 = "hola";
@@ -707,6 +739,77 @@ Diseña un programa de Java que permita modelar este ejercicio.
 # Switch
 @snapend
 
++++
+@snap[h3-blue text-08]
+### Switch
+Un switch es una instrucción condicional que nos permite evaluar una expressión integral. Es decir, podemos utilizar una variable numérica o de texto para generar los caminos. <br><br>
+
+Un switch está compuesto de 3 elementos: <br>
+@ul[](false)
+* Switch
+* Case
+* Default
+@ulend
+
+@snapend
+
++++
+@snap[h3-blue text-08]
+### Sintaxis
+@snapend
+
+```java
+String input = keyboard.nextLine();
+char traffic_light = input.charAt(0);
+
+switch(traffic_light) {
+  case 'R':
+    System.out.println("Stop!");
+    break;
+  case 'Y':
+    System.out.println("Slow down!");  
+    break;
+  case 'G':
+    System.out.println("Go!");  
+    break;
+}
+
+```
+
++++
+@snap[h3-blue text-08]
+### Sintaxis
+@snapend
+
+```java
+String input = keyboard.nextLine();
+char traffic_light = input.charAt(0);
+
+switch(traffic_light) {
+  case 'R':
+    System.out.println("Stop!");
+    break;
+  case 'Y':
+    System.out.println("Slow down!");  
+    break;
+  case 'G':
+    System.out.println("Go!");  
+    break;
+  default:
+    System.out.println("Wrong color!");
+}
+
+```
+
++++
+@snap[h3-blue text-08]
+### Errores comunes
+@ol[]
+1. Olvidar el break.
+2. Repetir opciones.
+3. Olvidar casos.
+@olend
+@snapend
 
 ---
 @snap[midpoint span-100 text-08]
