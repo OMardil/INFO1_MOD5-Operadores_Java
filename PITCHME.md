@@ -870,10 +870,8 @@ switch(traffic_light) {
 @snapend
 
 +++
-@snap[south span-70 text-left]
-@fa[exclamation-circle 2x text-pink]
-@fa[exclamation-circle 2x text-pink]
-@fa[exclamation-circle 2x text-pink]
+@snap[south span-70 text-left text-08]
+@fa[exclamation-circle text-pink]
 <br><br>
 Esto imprimiría:<br><br>
 Stop! <br>
