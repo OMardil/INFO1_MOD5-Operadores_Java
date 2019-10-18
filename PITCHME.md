@@ -554,7 +554,7 @@ int result;
 
 if (denominator == 0) {
     System.out.println("Error! You cannot divide by zero.");
-} else 
+} else {
   result = numerator / denominator;
 }
 ````
