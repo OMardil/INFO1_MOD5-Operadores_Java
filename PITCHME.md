@@ -859,6 +859,7 @@ switch(traffic_light) {
     break;        
 }
 ```
+@[5,8,11]()
 
 +++
 @snap[h3-blue text-08]
@@ -870,14 +871,13 @@ switch(traffic_light) {
 @snapend
 
 +++
-@snap[south span-70 text-left text-08]
+@snap[south span-40 text-left text-06 bg-black]
 @fa[exclamation-circle text-pink]
-<br>
-Esto imprimiría:<br><br>
-@css[text-08](Stop! <br>)
-@css[text-08](Slow down!<br>)
-@css[text-08](Go!<br>)
-@css[text-08](Wrong color!<br>)
+@css[text-white](Esto imprimiría:)<br><br>
+@css[text-08 text-white](> Stop! <br>)
+@css[text-08 text-white](> Slow down!<br>)
+@css[text-08 text-white](> Go!<br>)
+@css[text-08 text-white](> Wrong color!<br>)
 @snapend
 
 ```java
