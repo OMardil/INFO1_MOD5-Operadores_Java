@@ -1,8 +1,12 @@
 {
     "configurations": [
-        
-      
-
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Test",
+            "request": "launch",
+            "mainClass": "Test",
+            "projectName": "INFO1_MOD5-Operadores_Java_49ba9362"
+        },
         {
             "type": "java",
             "name": "CodeLens (Launch) - MonkeyTrouble",
@@ -26,6 +30,12 @@
             "name": "CodeLens (Launch) - Operators1",
             "request": "launch",
             "mainClass": "Operators1"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - A0XXXXXXX",
+            "request": "launch",
+            "mainClass": "A0XXXXXXX"
         }
     ]
 }

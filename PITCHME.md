@@ -25,7 +25,7 @@ Las variables pueden contener:
 @snapend
 
 @snap[span-100]
-@ul[text-08 text-blue]
+@ul[text-08 text-blue](false)
 * Letras (sin caracteres especiales)
 * Números (0123456789)
 * Guión bajo (_)
@@ -33,9 +33,9 @@ Las variables pueden contener:
 @snapend
 
 @snapend
-@snap[span-100 fragment text-09]
+@snap[span-100 text-09]
 Sin embargo, no pueden:
-@ul[text-09 text-blue]
+@ul[text-09 text-blue](false)
 * El primer caracter ser un número
 * Contener puntos (.), asteriscos (*), u otros caracteres especiales (@!ñ%&).
 * Ser una palabra clave o palabra reservada. [Ver lista](https://en.wikipedia.org/wiki/List_of_Java_keywords)
@@ -79,13 +79,13 @@ Una variable pasa por dos fases:
 @snapend
 
 @snap[span-100]
-@ol[text-blue]
+@ol[text-blue](false)
 1. Declaración: @css[text-black](Especificamos un tipo de dato [int, char, String] )
 2. Asignación: @css[text-black](Utilizamos el símbolo = para especificar un valor.)
 @olend
 @snapend
 <br>
-@snap[span-100 fragment text-center]
+@snap[span-100 text-center]
 Una variable SIEMPRE debe declararse antes de poderse usar. 
 @snapend
 
@@ -101,7 +101,7 @@ Una variable SIEMPRE debe declararse antes de poderse usar.
 Las variables primitivas son los tipos de datos más básicos existentes en Java. Al combinar estos tipos de datos podemos representar cualquier estructura, juego, video, u objeto que nos imaginemos.
 @snapend
 
-@snap[span-100 south fragment]
+@snap[span-100 south]
 ![](assets/img/primary_colors.png)
 @snapend
 
@@ -145,7 +145,7 @@ Podemos formar expresiones aritméticas mediante los operadores:
 @[1-8]()
 @snapend
 
-@snap[south-east span-100 fragment]
+@snap[south-east span-100]
 ## Output!
 ![](assets/img/output_expression.png)
 @snapend
@@ -162,7 +162,7 @@ Cuando ambos operandos son de tipo `int`, el símbolo (@css[text-blue]( / )) ind
 `100 / 99 = 1`
 <br><br>
 @snapend
-@snap[span-100 text-08 fragment]
+@snap[span-100 text-08]
 Cuando por lo menos algun operando de la división es de tipo `double` o `float`, se hace división decimal. El resultado contará con una parte decimal:
 <br>
 `9 / 2.0 = 4.5` 
@@ -196,7 +196,7 @@ Hay instrucciones especiales en Java que nos permiten incrementar el valor de un
 `--count`<br>
 @snapend
 
-@snap[span-60 south-east text-center fragment text-07 bg-orange]
+@snap[span-60 south-east text-center text-07 bg-orange]
 @color[white](Cuando el operador está antes de la variable, se actualiza el contenido de la variable antes de evaluar la expresión.<br><br> Cuando el operador está después, se evalúa la expresión y después se actualiza la variable.)
 @snapend
 
@@ -863,7 +863,7 @@ switch(traffic_light) {
 +++
 @snap[h3-blue text-08]
 ### Errores comunes
-@ol[]
+@ol[](false)
 1. Olvidar el break: Cuando omitimos los breaks, todas las siguientes opciones se ejecutan.
 2. Repetir opciones: dos cases distintos NO PUEDEN TENER un mismo valor.
 @olend
