@@ -881,7 +881,7 @@ switch(traffic_light) {
 @snapend
 
 ```java
-char traffic_light = 'G';
+char traffic_light = 'R';
 
 switch(traffic_light) {
   case 'R': //red light
