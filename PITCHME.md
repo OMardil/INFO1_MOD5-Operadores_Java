@@ -272,7 +272,9 @@ Cuando queremos incorporar librerías externas a alguna clase, agregamos referen
 De esta forma, toda la funcionalidad de la clase `Scanner` se incluye al programa en el que estamos trabajando.
 @snapend
 
+@snap[north span-100 text-08]
 +++?code=assets/src/ScannerTest.java&lang=java
+@snapend
 @snap[south span-100]
 @[1](@fa[book text-blue]<br>Agregamos el include al comenzar el archivo. Aquí podemos incluir todas las librerías que vayamos a importar.)
 @[3-4,13-15](Declaramos la clase y el método main)
